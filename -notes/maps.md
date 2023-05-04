@@ -42,5 +42,3 @@ if ok {
 ```
 
 This assigns the value associated with the key to the `value` variable, and sets `ok` to `true` if the key is present in the map, or `false` otherwise.
-
-#dev/go
