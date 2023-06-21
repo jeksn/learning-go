@@ -6,7 +6,7 @@ import (
   "time"
 )
 
-const passwordLength = 10
+const passwordLength = 15
 
 func main(){
   rand.Seed(time.Now().UnixNano())
@@ -21,6 +21,6 @@ func main(){
 }
 
 func randomChar() rune {
-  chars := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+  chars := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%-_+#"
   return rune(chars[rand.Intn(len(chars))])
 }
