@@ -14,10 +14,18 @@ func main() {
 	app := fiber.New(fiber.Config{
 		Views: engine,
 	})
+
 	app.Get("/", func(c *fiber.Ctx) error {
 		// Render index template
 		return c.Render("index", fiber.Map{
-			"Title": "Hello, World!!!??",
+			"Title": "Startpage",
+		})
+	})
+
+	app.Get("/about", func(c *fiber.Ctx) error {
+		// Render index template
+		return c.Render("about", fiber.Map{
+			"Title": "About",
 		})
 	})
 
