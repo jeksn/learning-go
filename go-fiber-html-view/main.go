@@ -18,7 +18,7 @@ func main() {
 	app.Get("/", func(c *fiber.Ctx) error {
 		// Render index template
 		return c.Render("index", fiber.Map{
-			"Title": "Startpage",
+			"Title": "Startpage!",
 		})
 	})
 
