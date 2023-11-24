@@ -1,17 +1,11 @@
 package main
 
 import (
-    "fmt"
-    "net/http"
-
-    "github.com/a-h/templ"
+	"context"
+	"os"
 )
 
 func main() {
-    component := hello("Johan")
-    
-    http.Handle("/", templ.Handler(component))
-
-    fmt.Println("Listening on :3000")
-    http.ListenAndServe(":3000", nil)
+	component := hello("John")
+	component.Render(context.Background(), os.Stdout)
 }
