@@ -8,7 +8,7 @@ import (
 const passwordLength = 15
 
 func randomChar() rune {
-  chars := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%-_+#"
+  chars := "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%-_+#*?!@&;:="
   return rune(chars[rand.Intn(len(chars))])
 }
 
